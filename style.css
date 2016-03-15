@@ -10,7 +10,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* End of Setup */
 
 body {
-	font-family: 'Raleway' sans-serif;
+	font-family: 'Raleway', sans-serif;
 	background-color: white;
 }
 
@@ -20,12 +20,11 @@ section {
 }
 
 h2 {
-
 	margin: 0;
 	font-weight: 400;
 	text-transform: uppercase;
 	letter-spacing: 1.5px;
-	font-size: 20px;
+	font-size: 22px;
 	text-align: center;
 	padding-top: 50px;
 }
@@ -33,12 +32,13 @@ h2 {
 h3 {
 	margin: 0;
 	padding-bottom: 5px;
-	font-weight: 200;
+	font-weight: 300;
 	letter-spacing: 1.5px;
+	font-size: 18px;
 }
 
 p {
-	font-size: 15px;
+	font-size: 14px;
 	text-align: center;
 	margin: 0;
 
@@ -54,7 +54,7 @@ p {
 }
 
 video.coverVid {
-	  position: fixed;
+	position: fixed;
     bottom: 0px;
     right: 0px;
     min-width: 100%;
@@ -66,17 +66,35 @@ video.coverVid {
     background-attachment: fixed;
 }
 
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	position: relative;
+	
+}
+
+#cover .wrapper {
+	height: 100vh;
+}
+
+.headerText {
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+nav {
+	padding: 20px 0;
+	text-align: right;
+}
 
 nav ul {
-	/*position: fixed;*/
-	/*top: 60px;
-	right: 50px;*/
 	font-family: 'Raleway' sans-serif;
-	font-weight: 100;
+	font-weight: 300;
 	font-size: 13px;
-	position: absolute;
-	top: 50px;
-	right: 50px;
+	padding: 0;
 }
 
 nav ul li{
@@ -92,6 +110,7 @@ nav ul li a {
 	border-bottom: 1px solid white;
 	letter-spacing: 1.5px;
 	font-size: 12px;
+	font-weight: 400;
 }
 
 nav ul li a:hover{
@@ -100,12 +119,6 @@ nav ul li a:hover{
 	transition: all .2s ease;
 }
 
-.wrapper {
-	width: 80%;
-	margin: 0 auto;
-	/*min-height: 100vh;*/
-	
-}
 
 #cover {
 	width: 100%;
@@ -117,21 +130,16 @@ nav ul li a:hover{
 	color: white;
 	font-size: 15px;
 	padding-top: 20px;
-	font-weight: 100;
+	font-weight: 300;
 	text-transform: lowercase;
 	letter-spacing: 4px;
 	text-align: center;
 }
 
 img.headerLogo {
-	/*width: 250px;
-  position: absolute;
-  top: 50px;
-  left: 50px;*/
-	width: 60%;
+	width: 70%;
 	display: block;
 	margin: 0 auto;
-	padding-top: 280px;
 	
 }
 
@@ -140,7 +148,6 @@ img.headerLogo {
 }
 
 #selectedWork {
-	height: 800px;
 	border-bottom: 1px dotted #aa863a;
 }
 
@@ -149,6 +156,7 @@ img.headerLogo {
 	width: calc(33.333333% - 10px);
 	margin: 5px;
 	position: relative;
+	transition: all .2s ease;
 }
 
 .imageHolder img {
@@ -156,9 +164,9 @@ img.headerLogo {
 	display: block;
 }
 
+
 .imageHolder:hover .extraInfo {
-	display: block;
-	transition: all .2s ease;
+	display: block;	
 }
 
 .imageHolder .extraInfo {
@@ -171,10 +179,14 @@ img.headerLogo {
 	color: #FFFFFF;
 	display: none;
 	text-align: center;
+	transition: all .2s ease;
 }
 
 .extraInfo h3 {
-	padding-top: 62px
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
 }
 
 
@@ -182,13 +194,29 @@ img.headerLogo {
 	width: 100%;
 }
 
+.buttons {
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 30px;
+}
+
 button {
 	padding: 20px 30px;
 	margin: 5px 10px 10px 0 ;
-	border: none;
+	border: 1px solid #aa863a;
 	border-radius: 8px;
 	background-color: #aa863a;
+	transition: all .3s ease;
 }
+
+button:hover {
+	background-color: #f4f1eb;
+}	
+
+button:hover a {
+	color: #aa863a;
+}
+
 
 button a{
 	text-decoration: none;
@@ -197,21 +225,19 @@ button a{
 	font-size: 14px;
 }
 
-.buttons {
-	padding: 30px ;
-	margin: 0 auto;
-}
-
-
 #contact, footer{
 	background-color: rgba(170, 134, 58, 0.9);
 	color: #f4f1eb;
 }
 
+#contact h3 {
+	font-weight: 700;
+}
+
 #contact p {
 	text-align: left;
 	letter-spacing: 1.5px;
-	font-weight: 100;
+	font-weight: 300px;
 
 }
 
@@ -256,6 +282,15 @@ form ul li input, form ul li textarea {
    font-weight: 200;
 }
 
+input[type=submit] {
+	color: white;
+	transition: all .3s ease;
+}
+
+input[type=submit]:hover {
+	background-color: white;
+	color: #aa863a;
+}
 
 .contactL {
 	margin-top: 15px;
@@ -270,5 +305,125 @@ form ul li input, form ul li textarea {
 
 footer {
 	height: 50px;
+}
+
+
+/* ------------------------------------  */
+/* -----------  RESPONSIVE  -----------  */
+/* ------------------------------------  */
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	
+}
+
+@media (max-width: 850px) {
+	.wrapper {
+		width: 90%;
+	}	
+	.extraInfo h3 {
+		font-size: 15px;
+	}
+}
+
+@media (max-width: 650px) {
+	nav {
+		position: absolute;
+		margin: 0 auto;
+		width: 100%;
+		text-align: center;
+		bottom: 0;
+	}
+
+	#selectedWork .wrapper {
+		width: 100%;
+	}
+
+	.imageHolder {
+		margin: 0;
+		width: 50%;
+	}
+
+	.imageHolder .extraInfo {
+		display: block;
+		background-color: transparent;
+	}
+
+	.extraInfo h3 {
+		left: 69%;
+    	top: 85%;
+	}
+}
+
+@media (max-width: 520px) {
+
+	.extraInfo h3 {
+		left: 75%;
+    	top: 85%;
+	}
+
+	.imageHolder {
+		width: 100%;
+	}
+
+	.contactL, .contactR {
+		width: 100%;
+		text-align: center;
+	}
+
+	#contact p {
+		text-align: center;
+	}
+
+	.contactR ul {
+		padding: 0;
+	}
+
+	video {
+		display: none;
+	}
+
+	#cover .wrapper {
+		width: 100%;
+		background-color: rgba(170, 134, 58, 0.8);
+	}
+
+	#cover {
+		background-image: url('images/kelvinlee.jpg');
+		background-size: cover;
+	}
+
+	img.headerLogo {
+		width: 90%;
+	}
 
 }
+
+
+@media (max-width: 450px) {
+	
+
+	nav ul li {
+		padding: 8px;
+		margin-bottom: 10px;
+	}
+
+	.extraInfo h3 {
+		left: 50%;
+    	top: 85%;
+	}
+	
+	.headerText {
+		top: 40%;
+	}
+
+	#cover h2 {
+		font-size: 13px;
+		width: 70%;
+		margin: 0 auto;
+	}
+}
+
+
+
+
